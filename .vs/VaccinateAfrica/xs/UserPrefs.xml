@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{C4B2DC6D-5838-AB96-773D-2A3BE549F8BE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUIScripts/LoadPref.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GUIScripts/LoadingTheScene.cs">
     <Files>
-      <File FileName="Assets/Scripts/GUI/LogoScreen.cs" Line="8" Column="43" />
-      <File FileName="Assets/Scripts/GUIScripts/MenuScripts.cs" Line="75" Column="27" />
-      <File FileName="Assets/Scripts/GUIScripts/LoadPref.cs" Line="18" Column="2" />
+      <File FileName="Assets/Scripts/GUIScripts/Loading.cs" Line="34" Column="46" />
+      <File FileName="Assets/Scripts/GUIScripts/MenuScripts.cs" Line="15" Column="21" />
+      <File FileName="Assets/Scripts/GUIScripts/LoadPref.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/GUIScripts/TutorialScript.cs" Line="50" Column="16" />
+      <File FileName="Assets/Scripts/GUIScripts/LoadingTheScene.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7c8183d6-0d80-4599-b331-b412cdee6ad4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8830ee77-2fc8-4efe-a275-723c2ebe6a78" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

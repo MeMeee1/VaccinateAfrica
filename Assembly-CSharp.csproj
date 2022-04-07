@@ -57,8 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/GUIScripts/LoadPref.cs" />
+    <Compile Include="Assets/Scripts/GUIScripts/Loading.cs" />
+    <Compile Include="Assets/Scripts/GUIScripts/LoadingTheScene.cs" />
     <Compile Include="Assets/Scripts/GUIScripts/LogoScreen.cs" />
     <Compile Include="Assets/Scripts/GUIScripts/MenuScripts.cs" />
+    <Compile Include="Assets/Scripts/GUIScripts/TutorialScript.cs" />
     <Compile Include="Assets/Scripts/OtherScript/CancelNoactiveScene.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -622,11 +625,11 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

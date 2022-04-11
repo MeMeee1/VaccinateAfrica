@@ -1,1 +1,1 @@
-# VaccinateAfrica
+Vaccinate

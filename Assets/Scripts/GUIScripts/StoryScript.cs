@@ -18,7 +18,7 @@ public class StoryScript : MonoBehaviour
     {
         if(index >=7)
         {
-            index = 7;
+            index = 6;
         }
         if(index <0)
         {

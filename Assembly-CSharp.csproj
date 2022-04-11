@@ -61,6 +61,8 @@
     <Compile Include="Assets/Scripts/GUIScripts/LoadingTheScene.cs" />
     <Compile Include="Assets/Scripts/GUIScripts/LogoScreen.cs" />
     <Compile Include="Assets/Scripts/GUIScripts/MenuScripts.cs" />
+    <Compile Include="Assets/Scripts/GUIScripts/StoryScript.cs" />
+    <Compile Include="Assets/Scripts/GUIScripts/TakeBack.cs" />
     <Compile Include="Assets/Scripts/GUIScripts/TutorialScript.cs" />
     <Compile Include="Assets/Scripts/OtherScript/CancelNoactiveScene.cs" />
   </ItemGroup>

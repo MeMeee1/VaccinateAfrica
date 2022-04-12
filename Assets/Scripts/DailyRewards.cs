@@ -1,13 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
 
 namespace DailyRewardSystem {
 	public enum RewardType {
-		//Metals,
-		Coins,
-		//Gems
+		Coins
 	}
 
 	[Serializable] public struct Reward {
@@ -17,11 +15,10 @@ namespace DailyRewardSystem {
 
 	public class DailyRewards : MonoBehaviour {
 
-
 		[Header ( "Main Menu UI" )]
-		//[SerializeField] Text metalsText;
+		
 		[SerializeField] Text coinsText;
-		//[SerializeField] Text gemsText;
+		
 
 		[Space]
 		[Header ( "Reward UI" )]
@@ -32,15 +29,14 @@ namespace DailyRewardSystem {
 		[SerializeField] Text rewardAmountText;
 		[SerializeField] Button claimButton;
 		[SerializeField] GameObject rewardsNotification;
-		[SerializeField] GameObject levelMenu;
 		[SerializeField] GameObject noMoreRewardsPanel;
 
 
 		[Space]
 		[Header ( "Rewards Images" )]
-		//[SerializeField] Sprite iconMetalsSprite;
+		
 		[SerializeField] Sprite iconCoinsSprite;
-		//[SerializeField] Sprite iconGemsSprite;
+		
 
 		[Space]
 		[Header ( "Rewards Database" )]
@@ -48,9 +44,9 @@ namespace DailyRewardSystem {
 
 		[Space]
 		[Header ( "FX" )]
-		//[SerializeField] ParticleSystem fxMetals;
+		
 		[SerializeField] ParticleSystem fxCoins;
-		//[SerializeField] ParticleSystem fxGems;
+		
 
 		[Space]
 		[Header ( "Timing" )]
@@ -65,8 +61,7 @@ namespace DailyRewardSystem {
 
 		void Start ( ) {
 			Initialize ( );
-			levelMenu.SetActive(true);
-            
+
 			StopAllCoroutines ( );
 			StartCoroutine ( CheckForRewards ( ) );
 		}
@@ -75,9 +70,9 @@ namespace DailyRewardSystem {
 			nextRewardIndex = PlayerPrefs.GetInt ( "Next_Reward_Index", 0 );
 
 			//Update Mainmenu UI (metals,coins,gems)
-			//UpdateMetalsTextUI ( );
+			
 			UpdateCoinsTextUI ( );
-			//UpdateGemsTextUI ( );
+			
 
 			//Add Click Events
 			openButton.onClick.RemoveAllListeners ( );
@@ -105,39 +100,28 @@ namespace DailyRewardSystem {
 
 					if ( elapsedHours >= nextRewardDelay )
 						ActivateReward ( );
-
 					else
 						DesactivateReward ( );
-
 				}
 
 				yield return new WaitForSeconds ( checkForRewardDelay );
 			}
 		}
-		/*void Neither()
-		{
-			levelMenu.SetActive(true);
-			noMoreRewardsPanel.SetActive(false);
-			rewardsNotification.SetActive(false);
-		}*/
 
 		void ActivateReward ( ) {
 			isRewardReady = true;
 
 			noMoreRewardsPanel.SetActive ( false );
-			//levelMenu.SetActive(false);
 			rewardsNotification.SetActive ( true );
 
 			//Update Reward UI
 			Reward reward = rewardsDB.GetReward ( nextRewardIndex );
 
 			//Icon
-			/*if ( reward.Type == RewardType.Metals )
-				rewardImage.sprite = iconMetalsSprite;*/
+			
 			if ( reward.Type == RewardType.Coins )
 				rewardImage.sprite = iconCoinsSprite;
-			//else
-			//	rewardImage.sprite = iconGemsSprite;
+			
 
 			//Amount
 			rewardAmountText.text = string.Format ( "+{0}", reward.Amount );
@@ -148,30 +132,26 @@ namespace DailyRewardSystem {
 			isRewardReady = false;
 
 			noMoreRewardsPanel.SetActive ( true );
-			//levelMenu.SetActive(false);
 			rewardsNotification.SetActive ( false );
 		}
 
 		void OnClaimButtonClick ( ) {
 			Reward reward = rewardsDB.GetReward ( nextRewardIndex );
 
-            if ( reward.Type == RewardType.Coins )
-            {
+			//check reward type
+			if ( reward.Type == RewardType.Coins ) {
 				Debug.Log ( "<color=yellow>" + reward.Type.ToString ( ) + " Claimed : </color>+" + reward.Amount );
 				GameData.Coins += reward.Amount;
 				fxCoins.Play ( );
 				UpdateCoinsTextUI ( );
 
 			} 
-
 			//Save next reward index
 			nextRewardIndex++;
 			if ( nextRewardIndex >= rewardsDB.rewardsCount )
-            {
-                nextRewardIndex = 0;
+				nextRewardIndex = 0;
 
-            }
-            PlayerPrefs.SetInt ( "Next_Reward_Index", nextRewardIndex );
+			PlayerPrefs.SetInt ( "Next_Reward_Index", nextRewardIndex );
 
 			//Save DateTime of the last Claim Click
 			PlayerPrefs.SetString ( "Reward_Claim_Datetime", DateTime.Now.ToString ( ) );
@@ -179,19 +159,13 @@ namespace DailyRewardSystem {
 			DesactivateReward ( );
 		}
 
-
 		//Update Mainmenu UI (metals,coins,gems)--------------------------------
-		/*void UpdateMetalsTextUI ( ) {
-			metalsText.text = GameData.Metals.ToString ( );
-		}*/
-
+		
 		void UpdateCoinsTextUI ( ) {
 			coinsText.text = GameData.Coins.ToString ( );
 		}
 
-		/*void UpdateGemsTextUI ( ) {
-			gemsText.text = GameData.Gems.ToString ( );
-		}*/
+		
 
 		//Open | Close UI -------------------------------------------------------
 		void OnOpenButtonClick ( ) {
@@ -204,5 +178,4 @@ namespace DailyRewardSystem {
 	}
 
 }
-
 

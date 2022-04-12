@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject showAchievement;
     
+    
     public void PlayScene()
     {
         SceneManager.LoadScene("InfroScene");
@@ -27,6 +28,14 @@ public class GameManager : MonoBehaviour
     public void GoHome()
     {
         SceneManager.LoadScene("MainScene");
+    }
+    public void LoadRewards()
+    {
+        SceneManager.LoadScene("RewardsScene",LoadSceneMode.Additive);
+    }
+    public void AddLoading()
+    {
+        SceneManager.LoadScene("Loading");
     }
     
 }

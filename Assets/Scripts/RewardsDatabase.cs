@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using DailyRewardSystem;
 
 [CreateAssetMenu ( fileName = "RewardsDB", menuName = "Daily Rewards System/Rewards Database" )]

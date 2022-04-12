@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 7282487f1bd38e14dbdc2d908fd046b3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - metalsText: {instanceID: 0}
+  - coinsText: {instanceID: 0}
+  - gemsText: {instanceID: 0}
+  - rewardsCanvas: {instanceID: 0}
+  - openButton: {instanceID: 0}
+  - closeButton: {instanceID: 0}
+  - rewardImage: {instanceID: 0}
+  - rewardAmountText: {instanceID: 0}
+  - claimButton: {instanceID: 0}
+  - rewardsNotification: {instanceID: 0}
+  - noMoreRewardsPanel: {instanceID: 0}
+  - iconMetalsSprite: {instanceID: 0}
+  - iconCoinsSprite: {instanceID: 0}
+  - iconGemsSprite: {instanceID: 0}
+  - rewardsDB: {fileID: 11400000, guid: 840f44a1a9ab3b646b5817b130037d5e, type: 2}
+  - fxMetals: {instanceID: 0}
+  - fxCoins: {instanceID: 0}
+  - fxGems: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -62,4 +62,8 @@ public class Story : MonoBehaviour
     {
         SceneManager.LoadScene("GameLevelScene");
     }
+    public void TakeMeHome()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }

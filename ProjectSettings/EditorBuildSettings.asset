@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LogoScene.unity
     guid: 378f43fa9fd0a4897b42f61ca89635c5
   - enabled: 1
-    path: Assets/Scenes/BeforeLoading.unity
-    guid: 79247ecb533efb34ebe9854a877a9335
-  - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: 152309f5995a54519a2ea334707863d9
   - enabled: 1
@@ -21,14 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/InfroScene.unity
     guid: 5274b99beab7a4161bab4afea7697ef7
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: bbfbcd1cb80994e558cf8421c154612e
-  - enabled: 1
     path: Assets/Scenes/GameLevelScene.unity
     guid: 65832f19cf73fe44e869ba203942ec2f
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: bbfbcd1cb80994e558cf8421c154612e
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: bd74515299fda2849924265bdda1a8a9
+  - enabled: 1
+    path: Assets/Scenes/ClaimReward.unity
+    guid: b40c244bf4dc54b429cfd33d2e838bab
   - enabled: 1
     path: Assets/Scenes/RewardsScene.unity
     guid: fc5b52989f708034f97632546cff0338

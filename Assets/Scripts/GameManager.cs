@@ -37,5 +37,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Loading");
     }
+    public void ClaimReward()
+    {
+        SceneManager.LoadScene("ClaimReward");
+    }
+    public void GameScene()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+    public void GameLevel()
+    {
+        SceneManager.LoadScene("GameLevelScene");
+    }
     
 }
